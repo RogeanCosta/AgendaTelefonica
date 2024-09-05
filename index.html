@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Agenda de Contatos</h1>
+    </header>
+
+    <div class="container">
+      <button id="addButton" class="btn-add">Cadastrar Contato</button>
+
+      <div class="table-container">
+        <table id="contactList">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Email</th>
+              <th>Celular</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody id="contactTableBody">
+            <!-- Contatos vão aparecer aqui -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Adicionar/Editar Contato</h2>
+        <form id="contactForm">
+          <input type="hidden" id="editIndex" />
+          <div>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required />
+          </div>
+          <div>
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" required />
+          </div>
+          <button id="saveButton" class="btn-save">Salvar</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="./js/controller.js"></script>
+    <script src="./js/view.js"></script>
+    <script src="./js/model.js"></script>
+  </body>
+</html>
